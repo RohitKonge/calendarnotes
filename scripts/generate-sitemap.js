@@ -1,8 +1,32 @@
 import fs from 'fs';
-import { blogPosts } from '../src/components/Blog';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const baseUrl = 'https://calendar-notes.com';
 const currentDate = new Date().toISOString().split('T')[0];
+
+// Define blog posts directly here since we can't import from TSX in plain JS
+const blogPosts = [
+  {
+    slug: "digital-calendar-note-organization",
+    date: "2025-04-21"
+  },
+  {
+    slug: "power-of-daily-note-taking",
+    date: "2025-04-20"
+  },
+  {
+    slug: "digital-vs-paper-notes",
+    date: "2025-04-19"
+  },
+  {
+    slug: "mind-mapping-calendar-notes",
+    date: "2025-04-18"
+  }
+];
 
 const staticPages = [
   {
@@ -62,5 +86,12 @@ function generateSitemapXml() {
 
 // Generate and write sitemap
 const sitemap = generateSitemapXml();
-fs.writeFileSync('./public/sitemap.xml', sitemap);
+const publicDir = path.join(__dirname, '..', 'public');
+
+// Create public directory if it doesn't exist
+if (!fs.existsSync(publicDir)) {
+  fs.mkdirSync(publicDir, { recursive: true });
+}
+
+fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
 console.log('Sitemap generated successfully!');

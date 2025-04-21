@@ -5,10 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npm run generate-sitemap",
+    "build": "tsc && vite build && node scripts/generate-sitemap.js",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "generate-sitemap": "ts-node --esm scripts/generate-sitemap.ts"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.7",
