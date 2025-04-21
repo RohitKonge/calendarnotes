@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Allow: /blog/
+Allow: /features
+Allow: /privacy
+Allow: /terms
+Allow: /calendar
+
+Disallow: /api/
+Disallow: /auth/
+
+# Crawl delay for better server performance
+Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://calendar-notes.com/sitemap.xml
