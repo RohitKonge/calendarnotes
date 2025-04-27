@@ -1,3 +1,4 @@
+# Calendar Notes robots.txt
 User-agent: *
 Allow: /
 Allow: /blog/
@@ -6,11 +7,12 @@ Allow: /privacy
 Allow: /terms
 Allow: /calendar
 
+# Protect API and auth routes
 Disallow: /api/
 Disallow: /auth/
 
-# Crawl delay for better server performance
-Crawl-delay: 10
+# Rate limiting for better performance
+Crawl-delay: 5
 
 # Sitemap location
-Sitemap: https://calendar-notes.com/sitemap.xml
+Sitemap: https://calendarnotes.online/sitemap.xml

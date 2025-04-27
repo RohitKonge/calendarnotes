@@ -10,8 +10,48 @@ import { SEOHead } from './components/SEOHead';
 function App() {
   const currentPath = window.location.pathname;
   const pageTitle = currentPath === '/' 
-    ? 'Calendar Notes - Your Digital Note Taking Calendar'
+    ? 'Calendar Notes - #1 Free Digital Calendar for Notes & Task Management'
     : 'Write & Organize Notes | Calendar Notes';
+
+  // Schema markup for better SEO
+  const schemaMarkup = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://calendarnotes.online/#website",
+        "name": "Calendar Notes",
+        "url": "https://calendarnotes.online",
+        "description": "The best free digital calendar for organizing notes & tasks. Beautiful, simple & powerful note-taking calendar.",
+        "applicationCategory": "ProductivityApplication",
+        "browserRequirements": "Requires JavaScript",
+        "operatingSystem": "Any",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://calendarnotes.online/#webpage",
+        "url": "https://calendarnotes.online",
+        "name": "Calendar Notes - #1 Free Digital Calendar for Notes & Task Management",
+        "isPartOf": { "@id": "https://calendarnotes.online/#website" },
+        "about": { "@id": "https://calendarnotes.online/#website" },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "@id": "https://calendarnotes.online/#primaryimage",
+          "url": "https://calendarnotes.online/social-preview.jpg",
+          "width": 1200,
+          "height": 630
+        },
+        "datePublished": "2025-04-27T00:00:00+00:00",
+        "dateModified": "2025-04-27T00:00:00+00:00",
+        "description": "Transform your daily planning with Calendar Notes - The best free digital calendar for organizing notes & tasks. Beautiful, simple & powerful note-taking calendar."
+      }
+    ]
+  };
 
   return (
     <AuthProvider>
@@ -21,10 +61,11 @@ function App() {
           path={currentPath}
           description={
             currentPath === '/'
-              ? 'Organize your thoughts, tasks, and memories with Calendar Notes. A beautiful, intuitive calendar app for taking and organizing daily notes.'
+              ? 'Transform your daily planning with Calendar Notes - The best free digital calendar for organizing notes & tasks. Beautiful, simple & powerful note-taking calendar.'
               : 'Take and organize your notes efficiently with our digital calendar. Free, beautiful, and easy to use calendar notes application.'
           }
         />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
         <Layout>
           <div 
             className="grid grid-cols-1 xl:grid-cols-3 gap-8 max-w-[1600px] mx-auto"

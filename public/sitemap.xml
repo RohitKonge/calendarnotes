@@ -1,26 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://calendar-notes.com/</loc>
-    <lastmod>2025-04-21</lastmod>
+    <loc>https://calendarnotes.online/</loc>
+    <lastmod>2025-04-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://calendar-notes.com/features</loc>
-    <lastmod>2025-04-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://calendarnotes.online/calendar</loc>
+    <lastmod>2025-04-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://calendarnotes.online/features</loc>
+    <lastmod>2025-04-27</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://calendar-notes.com/privacy</loc>
-    <lastmod>2025-04-21</lastmod>
+    <loc>https://calendarnotes.online/blog/digital-calendar-note-organization</loc>
+    <lastmod>2025-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calendarnotes.online/blog/power-of-daily-note-taking</loc>
+    <lastmod>2025-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calendarnotes.online/blog/digital-vs-paper-notes</loc>
+    <lastmod>2025-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calendarnotes.online/blog/mind-mapping-calendar-notes</loc>
+    <lastmod>2025-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calendarnotes.online/privacy</loc>
+    <lastmod>2025-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://calendar-notes.com/terms</loc>
-    <lastmod>2025-04-21</lastmod>
+    <loc>https://calendarnotes.online/terms</loc>
+    <lastmod>2025-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
